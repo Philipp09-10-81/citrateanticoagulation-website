@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt — Citrat-Antikoagulation</title>
+<meta name="description" content="Kontaktformular für citrateanticoagulation.com.">
+<link rel="canonical" href="https://citrateanticoagulation.com/kontakt.html">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="mobile-topbar">
+  <a href="/index.html" class="brand-mobile">Citrat-Antikoagulation</a>
+  <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Menu">&#9776;</button>
+</div>
+<div class="sidebar-backdrop"></div>
+<div class="layout">
+
+  <aside class="sidebar">
+    <a href="/index.html" class="brand">Citrat-<br>Antikoagulation</a>
+    <div class="nav-group-label">Übersicht</div>
+    <nav>
+      <a href="/index.html">Startseite</a>
+      <a href="/index.html#literatur">Aktuelle Literatur</a>
+    </nav>
+    <div class="nav-group-label">Wissen</div>
+    <nav>
+      <a href="/grundlagen.html">Warum & Wirkprinzip</a>
+      <a href="/indikation.html">Indikation</a>
+      <a href="/kontraindikationen.html">Kontraindikationen</a>
+    </nav>
+    <div class="nav-group-label">Protokolle</div>
+    <nav>
+      <a href="/protokoll-cvvhd.html">CVVHD (allgemein)</a>
+      <a href="/protokoll-prismaflex.html">Prismaflex / Prismax (Baxter)</a>
+      <a href="/protokoll-multifiltrate.html">multiFiltrate Ci-Ca (Fresenius)</a>
+      <a href="/protokoll-aquarius.html">Aquarius (Nikkiso)</a>
+      <a href="/protokoll-omni.html">OMNI (B. Braun)</a>
+      <a href="#">Off-Label-Anwendungen</a>
+    </nav>
+    <div class="nav-group-label">Monitoring</div>
+    <nav>
+      <a href="#">Monitoring-Übersicht</a>
+    </nav>
+    <div class="nav-group-label">Troubleshooting</div>
+    <nav>
+      <a href="/komplikationsmanagement.html">Komplikationsmanagement</a>
+    </nav>
+    <div class="nav-group-label">Tools</div>
+    <nav>
+      <a href="/rechner.html">Dosierungsrechner</a>
+      <a href="#">Aktuelle Datenlage</a>
+    </nav>
+    <div class="nav-group-label">Über & Kontakt</div>
+    <nav>
+      <a href="/ueber-uns.html">Über uns</a>
+      <a href="/kontakt.html" class="active">Kontakt</a>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="/kontakt.html" class="active">DE</a>
+      <a href="#">EN</a>
+      <a href="/es/index.html">ES</a>
+      <a href="/it/index.html">IT</a>
+      <a href="/fr/index.html">FR</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <h1>Kontakt</h1>
+      <p class="lede">Fragen, Anmerkungen oder Hinweise zu dieser Seite? Schreib uns direkt über dieses Formular.</p>
+    </section>
+
+    <section class="block" style="max-width: 520px;">
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="display:none;">
+          <label>Nicht ausfüllen: <input name="bot-field"></label>
+        </p>
+
+        <div class="calc-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="calc-field">
+          <label for="email">E-Mail-Adresse</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="calc-field">
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" required rows="6" style="width:100%; padding:0.55rem 0.6rem; border:1px solid var(--color-line); border-radius: var(--radius); font-family: var(--font-body); font-size:0.95rem; background: var(--color-bg);"></textarea>
+        </div>
+
+        <button type="submit" style="background: var(--color-teal-dark); color: #fff; border: none; padding: 0.7rem 1.3rem; border-radius: 3px; font-size: 0.95rem; cursor: pointer;">Nachricht senden</button>
+      </form>
+      <p id="formSuccess" style="display:none; color: var(--color-teal-dark); margin-top: 1rem;">Danke für deine Nachricht — wir melden uns so schnell wie möglich.</p>
+    </section>
+
+    <div class="info-box">
+      <strong class="label">Antwortzeit</strong>
+      Wir bemühen uns, Anfragen über dieses Formular innerhalb eines Werktags zu beantworten.
+    </div>
+
+    <footer class="page-footer">
+      citratanticoagulation.com — Entwurfsversion, in Aufbau
+    </footer>
+  </main>
+
+</div>
+
+<script>
+  // Verhindert einen vollen Seiten-Reload bei Netlify Forms und zeigt stattdessen
+  // eine Erfolgsmeldung direkt auf der Seite an.
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    fetch('/kontakt.html', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    }).then(() => {
+      form.style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    }).catch(() => {
+      alert('Senden fehlgeschlagen. Bitte versuch es erneut oder schreib direkt an info@citrateanticoagulation.com.');
+    });
+  });
+</script>
+
+<script src="/nav.js"></script>
+</body>
+</html>

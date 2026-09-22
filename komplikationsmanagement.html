@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komplikationsmanagement — Citrat-Antikoagulation</title>
+<meta name="description" content="Management der häufigsten Komplikationen der Citrat-Antikoagulation: metabolische Alkalose, Citratakkumulation, Hypo-/Hyperkalzämie.">
+<link rel="canonical" href="https://citrateanticoagulation.com/komplikationsmanagement.html">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="mobile-topbar">
+  <a href="/index.html" class="brand-mobile">Citrat-Antikoagulation</a>
+  <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Menu">&#9776;</button>
+</div>
+<div class="sidebar-backdrop"></div>
+<div class="layout">
+
+  <aside class="sidebar">
+    <a href="/index.html" class="brand">Citrat-<br>Antikoagulation</a>
+    <div class="nav-group-label">Übersicht</div>
+    <nav>
+      <a href="/index.html">Startseite</a>
+      <a href="/index.html#literatur">Aktuelle Literatur</a>
+    </nav>
+    <div class="nav-group-label">Wissen</div>
+    <nav>
+      <a href="/grundlagen.html">Warum & Wirkprinzip</a>
+      <a href="/indikation.html">Indikation</a>
+      <a href="/kontraindikationen.html">Kontraindikationen</a>
+    </nav>
+    <div class="nav-group-label">Protokolle</div>
+    <nav>
+      <a href="/protokoll-cvvhd.html">CVVHD (allgemein)</a>
+      <a href="/protokoll-prismaflex.html">Prismaflex / Prismax (Baxter)</a>
+      <a href="/protokoll-multifiltrate.html">multiFiltrate Ci-Ca (Fresenius)</a>
+      <a href="/protokoll-aquarius.html">Aquarius (Nikkiso)</a>
+      <a href="/protokoll-omni.html">OMNI (B. Braun)</a>
+      <a href="#">Off-Label-Anwendungen</a>
+    </nav>
+    <div class="nav-group-label">Monitoring</div>
+    <nav>
+      <a href="#">Monitoring-Übersicht</a>
+    </nav>
+    <div class="nav-group-label">Troubleshooting</div>
+    <nav>
+      <a href="/komplikationsmanagement.html" class="active">Komplikationsmanagement</a>
+    </nav>
+    <div class="nav-group-label">Tools</div>
+    <nav>
+      <a href="/rechner.html">Dosierungsrechner</a>
+      <a href="#">Aktuelle Datenlage</a>
+    </nav>
+    <div class="nav-group-label">Über & Kontakt</div>
+    <nav>
+      <a href="/ueber-uns.html">Über uns</a>
+      <a href="/kontakt.html">Kontakt</a>
+      <a href="/impressum.html">Impressum</a>
+      <a href="/datenschutz.html">Datenschutz</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="/komplikationsmanagement.html" class="active">DE</a>
+      <a href="/en/index.html">EN</a>
+      <a href="/es/index.html">ES</a>
+      <a href="/it/index.html">IT</a>
+    <a href="/fr/index.html">FR</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <h1>Komplikationsmanagement</h1>
+      <p class="lede">Die vier Komplikationen, auf die es in der Praxis ankommt — Erkennung und Gegensteuern.</p>
+    </section>
+
+    <section class="block">
+      <h2>Metabolische Alkalose</h2>
+      <p><strong>Mechanismus:</strong> Citrat wird zu Bikarbonat metabolisiert. Bei hoher Citratdosis oder verlangsamter Metabolisierung kann sich ein Bikarbonatüberschuss aufbauen.</p>
+      <div class="diagram-wrap">
+        <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema: Citratstoffwechsel und Entstehung der metabolischen Alkalose">
+          <defs>
+            <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="var(--color-ink-soft)"/>
+            </marker>
+          </defs>
+
+          <rect x="30" y="110" width="160" height="60" rx="4" fill="var(--color-teal-tint)" stroke="var(--color-teal)"/>
+          <text x="110" y="135" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-teal-dark)">Citrat</text>
+          <text x="110" y="152" text-anchor="middle" font-size="10.5" fill="var(--color-teal-dark)">(aus Antikoagulation,</text>
+          <text x="110" y="164" text-anchor="middle" font-size="10.5" fill="var(--color-teal-dark)">systemisch zurückgeführt)</text>
+
+          <line x1="190" y1="140" x2="250" y2="140" stroke="var(--color-ink-soft)" stroke-width="1.5" marker-end="url(#arrow2)"/>
+          <text x="220" y="130" text-anchor="middle" font-size="10" fill="var(--color-ink-soft)">Citratzyklus</text>
+
+          <rect x="256" y="105" width="200" height="70" rx="4" fill="var(--color-surface)" stroke="var(--color-ink-soft)"/>
+          <text x="356" y="128" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--color-ink)">Metabolisierung</text>
+          <text x="356" y="144" text-anchor="middle" font-size="10.5" fill="var(--color-ink-soft)">v. a. Leber, auch Muskel</text>
+          <text x="356" y="159" text-anchor="middle" font-size="10.5" fill="var(--color-ink-soft)">und Nierenrinde</text>
+
+          <line x1="456" y1="125" x2="510" y2="90" stroke="var(--color-ink-soft)" stroke-width="1.5" marker-end="url(#arrow2)"/>
+          <line x1="456" y1="155" x2="510" y2="190" stroke="var(--color-ink-soft)" stroke-width="1.5" marker-end="url(#arrow2)"/>
+
+          <rect x="516" y="55" width="220" height="60" rx="4" fill="var(--color-teal-tint)" stroke="var(--color-teal)"/>
+          <text x="626" y="80" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-teal-dark)">≈ 3 mol Bikarbonat</text>
+          <text x="626" y="97" text-anchor="middle" font-size="10.5" fill="var(--color-teal-dark)">pro mol Citrat</text>
+
+          <rect x="516" y="160" width="220" height="60" rx="4" fill="var(--color-teal-tint)" stroke="var(--color-teal)"/>
+          <text x="626" y="185" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-teal-dark)">freies Ca²⁺</text>
+          <text x="626" y="202" text-anchor="middle" font-size="10.5" fill="var(--color-teal-dark)">wieder verfügbar</text>
+
+          <rect x="500" y="230" width="250" height="58" rx="4" fill="var(--color-amber-tint)" stroke="var(--color-amber)"/>
+          <text x="625" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="var(--color-amber)">Bei hoher Dosis oder</text>
+          <text x="625" y="267" text-anchor="middle" font-size="12" font-weight="700" fill="var(--color-amber)">verminderter Clearance:</text>
+          <text x="625" y="282" text-anchor="middle" font-size="12" font-weight="700" fill="var(--color-amber)">Metabolische Alkalose</text>
+          <line x1="626" y1="220" x2="626" y2="228" stroke="var(--color-amber)" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow2)"/>
+        </svg>
+        <p class="diagram-caption">Jedes Mol metabolisiertes Citrat setzt rechnerisch etwa 3 Mol Bikarbonat frei. Bei hoher Citratzufuhr oder eingeschränkter Metabolisierungskapazität (siehe Kontraindikationen) kann sich daraus eine metabolische Alkalose entwickeln.</p>
+      </div>
+      <p><strong>Gegenmaßnahmen:</strong> Citratdosis reduzieren (sofern die Filterlaufzeit das zulässt), Blutfluss/Effluentrate anpassen, Bikarbonatgehalt der Substitutions-/Dialysatlösung reduzieren.</p>
+    </section>
+
+    <section class="block">
+      <h2>Citratakkumulation</h2>
+      <p><strong>Mechanismus:</strong> Bei eingeschränkter Metabolisierungskapazität (siehe Kontraindikationen) reichert sich Citrat systemisch an und bindet zunehmend auch systemisches Calcium.</p>
+      <p><strong>Erkennung:</strong> Steigendes Verhältnis von Gesamt- zu ionisiertem Calcium (typischer Schwellenwert &gt; 2,5), steigender Calciumsubstitutionsbedarf bei gleichzeitig fallendem systemischem ionisiertem Ca²⁺, zunehmende metabolische Azidose.</p>
+      <p><strong>Gegenmaßnahmen:</strong> Citratdosis reduzieren oder Citrat pausieren, Effluentdosis erhöhen (schnellere Citrat-Elimination), alternative Antikoagulation erwägen, wenn sich die Akkumulation nicht rasch bessert.</p>
+    </section>
+
+    <section class="block">
+      <h2>Hypo- und Hyperkalzämie</h2>
+      <p><strong>Hypokalzämie:</strong> meist durch unzureichende systemische Calciumsubstitution oder beginnende Citratakkumulation.</p>
+      <p><strong>Hyperkalzämie:</strong> meist durch zu hohe Calciumsubstitution relativ zur tatsächlichen Citratbindung.</p>
+      <p><strong>Gegenmaßnahmen:</strong> Anpassung der Calciumsubstitutionsrate anhand der gemessenen ionisierten Calciumwerte (systemisch und im Filterkreislauf), siehe Zielwerte im CVVHD-Protokoll.</p>
+    </section>
+
+    <section class="block">
+      <h2>Weitere: Hypernatriämie</h2>
+      <p>Bei Verwendung hypertoner, natriumreicher Citratlösungen kann es zu einer Natriumbelastung kommen. Relevanz und Ausprägung hängen von der verwendeten Citratkonzentration und -menge ab.</p>
+    </section>
+
+    <div class="disclaimer">
+      Diese Übersicht ersetzt kein zentrumsspezifisches Troubleshooting-Protokoll. Sie dient als Ausgangspunkt für ein eigenes Flowchart, das an die verwendeten Geräte und Laborintervalle angepasst werden sollte.
+    </div>
+
+    <footer class="page-footer">
+      citratanticoagulation.com — Entwurfsversion, in Aufbau
+    </footer>
+  </main>
+
+</div>
+<script src="/nav.js"></script>
+</body>
+</html>

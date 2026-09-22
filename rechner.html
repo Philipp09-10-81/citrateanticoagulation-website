@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dosing Calculator — Citrate Anticoagulation</title>
+<meta name="description" content="Interactive calculator for citrate dosing and calcium replacement in CRRT.">
+<link rel="alternate" hreflang="de" href="https://citrateanticoagulation.com/rechner.html">
+<link rel="alternate" hreflang="en" href="https://citrateanticoagulation.com/en/rechner.html">
+<link rel="alternate" hreflang="x-default" href="https://citrateanticoagulation.com/en/rechner.html">
+<link rel="canonical" href="https://citrateanticoagulation.com/en/rechner.html">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="mobile-topbar">
+  <a href="/en/index.html" class="brand-mobile">Citrate Anticoagulation</a>
+  <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Menu">&#9776;</button>
+</div>
+<div class="sidebar-backdrop"></div>
+<div class="layout">
+
+  <aside class="sidebar">
+    <a href="/en/index.html" class="brand">Citrate<br>Anticoagulation</a>
+    <div class="nav-group-label">Overview</div>
+    <nav>
+      <a href="/en/index.html">Home</a>
+      <a href="/en/index.html#literature">Latest literature</a>
+    </nav>
+    <div class="nav-group-label">Basics</div>
+    <nav>
+      <a href="#">Why & mechanism</a>
+      <a href="#">Indication</a>
+      <a href="#">Contraindications</a>
+    </nav>
+    <div class="nav-group-label">Management</div>
+    <nav>
+      <a href="#">Managing complications</a>
+      <a href="#">Monitoring & troubleshooting</a>
+    </nav>
+    <div class="nav-group-label">Protocols</div>
+    <nav>
+      <a href="/en/protokoll-cvvhd.html">CVVHD</a>
+      <a href="#">Off-label uses</a>
+    </nav>
+    <div class="nav-group-label">Tools</div>
+    <nav>
+      <a href="/en/rechner.html" class="active">Dosing calculator</a>
+      <a href="#">Current evidence</a>
+    </nav>
+    <div class="nav-group-label">Legal</div>
+    <nav>
+      <a href="/impressum.html">Imprint (DE)</a>
+      <a href="/datenschutz.html">Privacy (DE)</a>
+    </nav>
+    <div class="lang-switch">
+      <a href="/rechner.html">DE</a>
+      <a href="/en/index.html" class="active">EN</a>
+      <a href="/es/index.html">ES</a>
+      <a href="/it/index.html">IT</a>
+    <a href="/fr/index.html">FR</a>
+    </div>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <h1>Citrate dosing calculator</h1>
+      <p class="lede">Calculates a starting citrate rate and the associated calcium replacement based on blood flow and target citrate concentration.</p>
+    </section>
+
+    <div class="disclaimer">
+      <strong>Placeholder formula.</strong> The calculation used here is for illustration only. Before any clinical use, it must be replaced with the validated calculation scheme of your center or device software and cross-checked. Not suitable for clinical use in its current form.
+    </div>
+
+    <section class="block calc-panel">
+      <div>
+        <div class="calc-field">
+          <label for="bloodFlow">Blood flow (Qb) — ml/min</label>
+          <input type="number" id="bloodFlow" value="150" min="10" step="5">
+        </div>
+        <div class="calc-field">
+          <label for="citrateConc">Citrate solution concentration — mmol/l</label>
+          <input type="number" id="citrateConc" value="136" min="1" step="1">
+        </div>
+        <div class="calc-field">
+          <label for="targetDose">Target citrate dose — mmol/l of blood flow</label>
+          <input type="number" id="targetDose" value="3.0" min="0.5" step="0.1">
+        </div>
+        <div class="calc-field">
+          <label for="caReplacementRatio">Calcium replacement factor — mmol Ca per mmol citrate</label>
+          <input type="number" id="caReplacementRatio" value="0.5" min="0.1" step="0.05">
+        </div>
+        <button id="calcBtn" style="background: var(--color-teal-dark); color: #fff; border: none; padding: 0.7rem 1.3rem; border-radius: 3px; font-size: 0.95rem; cursor: pointer;">Calculate</button>
+      </div>
+
+      <div class="calc-result">
+        <span class="value-label">Citrate infusion rate</span>
+        <span class="value" id="resultCitrateRate">— ml/h</span>
+        <span class="value-label">Estimated calcium replacement rate</span>
+        <span class="value" id="resultCaRate">— mmol/h</span>
+        <p style="font-size: 0.82rem; color: var(--color-ink-soft); margin-top: 1rem;">These values are starting points for fine titration based on measured ionized calcium in the filter circuit and systemically.</p>
+      </div>
+    </section>
+
+    <footer class="page-footer">
+      citratanticoagulation.com — draft version, under construction
+    </footer>
+  </main>
+
+</div>
+
+<script src="/script.js"></script>
+<script src="/nav.js"></script>
+</body>
+</html>
